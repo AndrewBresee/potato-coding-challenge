@@ -5,10 +5,11 @@
     <script type="text/javascript"></script>
   </head>
   <body>
+  	<h1 class = 'title'>Flickr Public Feed</h1>
     <form ng-controller="SearchPictures">
-    	<button onload="search()" ng-click="search()">Search for pictures</button><br/>
-    	<input type="search" id="search" placeholder="Search for photos" ng-model="querry">
-      <h1>Search results for: {{querry}}</h1>
+    	<input type="search" id="search" placeholder="Search for photos" ng-model="querry" >
+    	<button ng-click="search()">Search Flickr</button><br/>
+      <h2>Searching for: {{querry}}</h2>
 
       <div ng-repeat = 'info in results'>
       	<p>Title: {{info.title}}</p>
