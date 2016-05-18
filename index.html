@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app = 'flickr-potato'>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <form ng-controller="SearchPictures">
+    	<button ng-click="search()">Search for pictures</button><br/>
+    	<input type="search" id="search" placeholder="Search for photos" ng-model="querry">
+      <h1>Hello, {{response.data}}!</h1>
+
+      <div ng-repeat = 'info in information'>
+
+      </div>
+
+    </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
