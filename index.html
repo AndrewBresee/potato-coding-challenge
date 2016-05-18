@@ -8,7 +8,8 @@
     <form ng-controller="SearchPictures">
     	<button ng-click="search()">Search for pictures</button><br/>
     	<input type="search" id="search" placeholder="Search for photos" ng-model="querry">
-      <h1>Hello, {{response.data}}!</h1>
+      <h1>You are looking for {{querry}}!</h1>
+      <h1>Your results: {{results}}!</h1>
 
       <div ng-repeat = 'info in information'>
 
