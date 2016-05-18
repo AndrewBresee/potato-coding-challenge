@@ -9,10 +9,12 @@
     	<button ng-click="search()">Search for pictures</button><br/>
     	<input type="search" id="search" placeholder="Search for photos" ng-model="querry">
       <h1>You are looking for {{querry}}!</h1>
-      <h1>Your results: {{results}}!</h1>
 
-      <div ng-repeat = 'info in information'>
-
+      <div ng-repeat = 'info in results'>
+      	<p>Title: {{info.title}}</p>
+      	<p>Author: {{info.author}}</p>
+      	<p><img ng-src="{{info.media.m}}"/></p>
+      	<p>View on flicker<src ng-src="{{info.link}}"/></p>
       </div>
 
     </form>
