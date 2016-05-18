@@ -5,6 +5,10 @@ app.controller('SearchPictures', function($scope, $http) {
 	$scope.querry = "Potato";
 	$scope.results; 
 
+	angular.element(document).ready(function () {
+			$scope.search();
+	});
+
 	$scope.search = function() {
 
 		var url = 'https://api.flickr.com/services/feeds/photos_public.gne?tags='+$scope.querry+'&tagmode=all&format=json&jsoncallback=JSON_CALLBACK';

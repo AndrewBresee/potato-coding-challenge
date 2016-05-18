@@ -6,9 +6,9 @@
   </head>
   <body>
     <form ng-controller="SearchPictures">
-    	<button ng-click="search()">Search for pictures</button><br/>
+    	<button onload="search()" ng-click="search()">Search for pictures</button><br/>
     	<input type="search" id="search" placeholder="Search for photos" ng-model="querry">
-      <h1>Search results for: {{querry}}!</h1>
+      <h1>Search results for: {{querry}}</h1>
 
       <div ng-repeat = 'info in results'>
       	<p>Title: {{info.title}}</p>
