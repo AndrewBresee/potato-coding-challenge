@@ -4,16 +4,61 @@
   width: 100%;
   padding: auto;
 }
-.card-content {
-	font-size: 1% auto;
+
+.grid {
+	display: inline-block;
+	outline: 1px solid black;
+	margin: 0.5%;
+	width: 25%;
+	border: 3px solid #73AD21;
+}
+
+.grid-item--width2 { 
+	width: 100%; 
+	text-align: center;
+}
+.grid-item {
+	padding-top: 10%;
+	width: 100%; 
+	height: 100%;
+	text-align: center;
+}
+
+
+.card-title {
+	font-size: 10%;
 }
 
 .container {
-    padding: 0 0.5rem;
-    margin: 0 auto;
-    width: 100%;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
+.card-content {
+	width: auto;
+	height: 5%;
+}
+
+.col s12 m12 l12{
+	width: auto;
+	height: 5%;
+	font-size: 10%;
+}
+
+.title {
+	text-align: center;
+}
+
+.earchingFor {
+	position: relative;
+}
+
+#search {
+	float: right;
+	position: absolute;
+	width: 50%
+}
 
 div {
     display: block;

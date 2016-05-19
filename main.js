@@ -23,6 +23,7 @@ app.controller('SearchPictures', function($scope, $http) {
 			console.log("WORKS!")
 			console.log(status);
 			$scope.results = status.items;
+			$scope.results.date_taken = $scope.results.date_taken.toString();
 		}).
 		error(function(status) {
 		  console.log("NO WORKS!")
