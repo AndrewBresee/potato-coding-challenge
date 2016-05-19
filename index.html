@@ -1,26 +1,46 @@
 <!doctype html>
-<html ng-app = 'flickr-potato'>
+<html ng-cloak ng-app = 'flickr-potato'>
   <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
    <!-- Angular Material requires Angular.js Libraries -->
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
-    
-   <!-- Angular Material Library -->
-   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc5/angular-material.min.js"></script>
+
+   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
   </head>
   <body>
+
 
   	<h1 class = 'title'>Flickr Public Feed</h1>
     <form ng-controller="SearchPictures">
 
 
-    	<input type="search" id="search" placeholder="Search for photos" ng-model="querry" >
+    	<input ng-change="search()" type="search" id="search" placeholder="Search for photos" ng-model="querry" >
     	<button ng-click="search()">Search Flickr</button><br/>
       <h2>Searching for: {{querry}}</h2>
 
-      <div ng-repeat = 'info in results'>
+      <div ng-repeat = 'info in results' class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img ng-src="{{info.media.m}}"/>
+                
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{info.title}}</span>
+              </div>
+              <div class="card-action">
+                <a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
+                <a ng-href="{{info.link}}">View on Flickr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+`
+
+      <div ng-repeat = 'info in results' class="card">
       	<p>Title: {{info.title}}</p>
       	<p>Author: {{info.author}}</p>
       	<p><img ng-src="{{info.media.m}}"/></p>
