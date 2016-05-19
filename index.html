@@ -1,12 +1,21 @@
 <!doctype html>
 <html ng-app = 'flickr-potato'>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+   <!-- Angular Material requires Angular.js Libraries -->
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    
+   <!-- Angular Material Library -->
+   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc5/angular-material.min.js"></script>
   </head>
   <body>
+
   	<h1 class = 'title'>Flickr Public Feed</h1>
     <form ng-controller="SearchPictures">
+
+
     	<input type="search" id="search" placeholder="Search for photos" ng-model="querry" >
     	<button ng-click="search()">Search Flickr</button><br/>
       <h2>Searching for: {{querry}}</h2>

@@ -1,6 +1,6 @@
 // include an alert that no information was found
 
-var app = angular.module('flickr-potato', ['ui.bootstrap']);
+var app = angular.module('flickr-potato', ['ngMaterial']);
 
 
 app.controller('SearchPictures', function($scope, $http) {
