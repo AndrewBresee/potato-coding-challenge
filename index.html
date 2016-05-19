@@ -10,20 +10,21 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
   </head>
-  <body>
+  <body ng-controller="SearchPictures">
 
+  <div  class = 'container'>
 
-  	<h1 class = 'title'>Flickr Public Feed</h1>
-    <form ng-controller="SearchPictures">
+    <h1 class = 'title'>Flickr Public Feed</h1>
 
+    <input ng-change="search()" type="search" id="search" placeholder="Search for photos" ng-model="querry" >
+    <h4>Searching for: {{querry}}</h4>
 
-    	<input ng-change="search()" type="search" id="search" placeholder="Search for photos" ng-model="querry" >
-      <h4>Searching for: {{querry}}</h4>
+  </div>
 
       <div class="row">  
       <div class="col s12 m12 l12" >
 	      <div ng-repeat = 'info in results'class="form-group col m3 l3">
-	          <div class="col s2 m7">
+	          <div class="col s20 m10">
 	            <div class="card">
 	              <div class="card-image">
 	                <img class = '.card-image' ng-src="{{info.media.m}}"/>

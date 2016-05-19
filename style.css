@@ -2,6 +2,10 @@
   border-radius: 2px 2px 0 0;
   position: relative;
   width: 100%;
+  padding: auto;
+}
+.card-content {
+	font-size: 1% auto;
 }
 
 .container {
