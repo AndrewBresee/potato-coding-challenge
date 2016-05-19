@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html ng-cloak ng-app = 'flickr-potato'>
   <head>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,60 +13,35 @@
    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 
   </head>
-  <body ng-controller="SearchPictures">
+
+<body ng-controller="SearchPictures">
 
   <div  class = 'container'>
-
-    <h1 class = 'title'>Flickr Public Feed</h1>
-
+    <h1 class = 'main-title'>Flickr Public Feed</h1>
     
     <h4 class = 'searchingFor'>Searching for:
       <input ng-change="search()" type="search" id="search" placeholder="Search for photos" ng-model="querry" >
     </h4>
-    
   </div>
 
 
-  <div ng-repeat = 'info in results' class="grid">
-    <div class="grid-item">
+  <div class='grid'>
+    <div ng-repeat = 'info in results' class='grid-item card-panel '>
       <img class = '.card-image' ng-src="{{info.media.m}}"/>
-    </div>
+  
+      <div class = 'info'>
+        <br class='title'>{{info.title}}</br>
+        <br class ='publish-date'>Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</br>
+      </div>
 
-    <div class="grid-item grid-item--width2">
-        <span class="title">{{info.title}}</span>
-        <span class ="publish date">Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</span>
-    </div>
+      <div class ='links'>
+        <a ng-href='https://www.flickr.com/photos/{{info.author_id}}'>View author</a>
+        <a ng-href='{{info.link}}'>View on Flickr</a> 
+      </div>
 
-    <div class="grid-item">
-     <a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
-     <a ng-href="{{info.link}}">View on Flickr</a> 
     </div>
-
   </div>
 
-<!--     <div class="row s1 m1 l1" >
-      <div ng-repeat = 'info in results'class="col s4">
-          <div>
-            <div class="card">
-              <div class="card-image">
-                <img class = '.card-image' ng-src="{{info.media.m}}"/>
-              </div>
-
-              <div class="card-content">
-                <span class="card-title">{{info.title}}</span>
-                <span class ="publish date">Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</span>
-              </div>
-
-              <div class="card-action">
-                <a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
-                <a ng-href="{{info.link}}">View on Flickr</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-    </div>
- -->
 
 
     </form>

@@ -1,32 +1,50 @@
-.card  {
-  border-radius: 2px 2px 0 0;
-  position: relative;
-  width: 100%;
-  padding: auto;
-}
-
 .grid {
-	display: inline-block;
-	outline: 1px solid black;
-	margin: 0.5%;
-	width: 25%;
-	border: 3px solid #73AD21;
+	background: #EEE;
+	display: block;
+  clear: both;
+  text-align: center;
 }
 
-.grid-item--width2 { 
-	width: 100%; 
-	text-align: center;
-}
 .grid-item {
-	padding-top: 10%;
-	width: 100%; 
-	height: 100%;
+	margin: 10%;
+	border-radius: 5%;
+	display: inline-block;
+	padding-top: 1%;
+	width: 25%; 
+	height: 25%;
 	text-align: center;
+	font-size: 100%;
 }
 
+body {
+	padding: 4%;
+}
 
-.card-title {
-	font-size: 10%;
+.main-title {
+	text-align: center;
+	font-size: 500%;
+}
+
+a {
+  line-height: 1em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1%;
+  font-size: 90%;
+}
+
+.card-panel{
+	margin: 5%;
+}
+
+img {
+	width: 90%;
+	height: 100%
+	outline: 1px solid black;
+}
+
+.info {
+	font-size: 90%
 }
 
 .container {
@@ -35,19 +53,10 @@
   width: 100%;
 }
 
-.card-content {
-	width: auto;
-	height: 5%;
-}
-
-.col s12 m12 l12{
-	width: auto;
-	height: 5%;
-	font-size: 10%;
-}
 
 .title {
 	text-align: center;
+	font-size: 100%;
 }
 
 .earchingFor {
@@ -56,10 +65,7 @@
 
 #search {
 	float: right;
+	margin-left: 1%;
 	position: absolute;
 	width: 50%
-}
-
-div {
-    display: block;
 }
