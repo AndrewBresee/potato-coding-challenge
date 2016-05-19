@@ -18,35 +18,30 @@
 
 
     	<input ng-change="search()" type="search" id="search" placeholder="Search for photos" ng-model="querry" >
-    	<button ng-click="search()">Search Flickr</button><br/>
-      <h2>Searching for: {{querry}}</h2>
+      <h4>Searching for: {{querry}}</h4>
 
-      <div ng-repeat = 'info in results' class="row">
-          <div class="col s12 m7">
-            <div class="card">
-              <div class="card-image">
-                <img ng-src="{{info.media.m}}"/>
-                
-              </div>
-              <div class="card-content">
-                <span class="card-title">{{info.title}}</span>
-              </div>
-              <div class="card-action">
-                <a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
-                <a ng-href="{{info.link}}">View on Flickr</a>
-              </div>
-            </div>
-          </div>
-        </div>
-`
+      <div class="row">  
+      <div class="col s12 m12 l12" >
+	      <div ng-repeat = 'info in results'class="form-group col m3 l3">
+	          <div class="col s2 m7">
+	            <div class="card">
+	              <div class="card-image">
+	                <img class = '.card-image' ng-src="{{info.media.m}}"/>
+	              </div>
+	              <div class="card-content">
+	                <span class="card-title">{{info.title}}</span>
+	              </div>
+	              <div class="card-action">
+	                <a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
+	                <a ng-href="{{info.link}}">View on Flickr</a>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	    </div>
+	    </div>
 
-      <div ng-repeat = 'info in results' class="card">
-      	<p>Title: {{info.title}}</p>
-      	<p>Author: {{info.author}}</p>
-      	<p><img ng-src="{{info.media.m}}"/></p>
-      	<p><a ng-href="https://www.flickr.com/photos/{{info.author_id}}">View author</a>
-      	<p><a ng-href="{{info.link}}">View on Flickr</a>
-      </div>
+
 
     </form>
     </div>
