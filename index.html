@@ -46,14 +46,14 @@
 
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4 truncate">{{info.title}}<i class="material-icons right">more_vert</i></span>
-        <p><a ng-href='https://www.flickr.com/photos/{{info.author_id}}'>Post author</a></p>
-        <p><a ng-href='{{info.link}}'>View on Flickr</a></p>
+        <p><a target="_blank" ng-href='https://www.flickr.com/photos/{{info.author_id}}'>Post author</a></p>
+        <p><a target="_blank" ng-href='{{info.link}}'>View on Flickr</a></p>
       </div>
 
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{info.title}}<i class="material-icons right">close</i></span>
 
-        Tags: <p id='tags' ng-repeat = "tags in info.tags.split(' ')"><a id='tagLinks' ng-href='https://www.flickr.com/photos/tags/{{tags}}' style="float:left" > {{tags}}</a></p>
+        Tags: <p id='tags' ng-repeat = "tags in info.tags.split(' ')"><a id='tagLinks' target="_blank" ng-href='https://www.flickr.com/photos/tags/{{tags}}' style="float:left" > {{tags}}</a></p>
 
         <div  style="clear:both; padding-top: 10%;">Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</div>
         
