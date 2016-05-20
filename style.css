@@ -6,15 +6,14 @@
 }
 
 .grid-item {
-	margin: 10%;
 	border-radius: 5%;
 	display: inline-block;
-	padding-top: 1%;
 	width: 25%; 
 	height: 25%;
 	text-align: center;
 	font-size: 100%;
 }
+
 
 body {
 	padding: 4%;
@@ -31,10 +30,6 @@ a {
   text-decoration: none;
   padding: 1%;
   font-size: 90%;
-}
-
-.card-panel{
-	margin: 5%;
 }
 
 img {
@@ -69,3 +64,11 @@ img {
 	position: absolute;
 	width: 50%
 }
+
+div.hover-div {
+    padding: 10px;
+    background: green;
+    color: white;
+}
+
+

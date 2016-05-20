@@ -1,4 +1,3 @@
-// include an alert that no information was found
 
 var app = angular.module('flickr-potato', []);
 

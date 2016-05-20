@@ -36,23 +36,26 @@
 
   <div class='grid'>
 
-    <div ng-repeat = 'info in results' class='grid-item card'>
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" ng-src="{{info.media.m}}">
-            </div>
+    <div ng-repeat = 'info in results' class='grid-item card hoverable' style="margin: 0.5%;">
 
-            <div class="card-content">
-              <span class="title card-title activator grey-text text-darken-4">{{info.title}}<i class="material-icons right">more_vert</i></span>
-              <p><a ng-href='https://www.flickr.com/photos/{{info.author_id}}'>View author</a></p>
-              <p><a ng-href='{{info.link}}'>View on Flickr</a></p>
-              <br class ='publish-date'>Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</br>
-            </div>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" ng-src="{{info.media.m}}">
+      </div>
 
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4 truncate">{{info.title}}<i class="material-icons right">more_vert</i></span>
+        <p><a ng-href='https://www.flickr.com/photos/{{info.author_id}}'>Post author</a></p>
+        <p><a ng-href='{{info.link}}'>View on Flickr</a></p>
+      </div>
+
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{info.title}}<i class="material-icons right">close</i></span>
+        <p>Tags: {{info.tags}}</p>
+        <br class ='publish-date'>Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</br>
+      </div>
+
     </div>
+
   </div>
 
 
