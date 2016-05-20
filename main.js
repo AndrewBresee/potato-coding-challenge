@@ -19,12 +19,10 @@ app.controller('SearchPictures', function($scope, $http) {
 		    url: url
 		}).
 		success(function(status) {
-			console.log("WORKS!")
-			console.log(status);
 			$scope.results = status.items;
 		}).
 		error(function(status) {
-		  console.log("NO WORKS!")
+		  console.log("Eror")
 		});
 
 		

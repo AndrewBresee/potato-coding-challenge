@@ -39,7 +39,6 @@ body {
 	font-size: 100%;
 }
 
-
 a {
   line-height: 1em;
   display: inline-block;
@@ -47,7 +46,6 @@ a {
   padding: 1%;
   font-size: 90%;
 }
-
 
 #tagLinks {
 	text-decoration: underline;
@@ -60,6 +58,10 @@ a {
 	display: inline-block;
 }
 
+#allTags {
+	padding-top: 10%; 
+	text-align: center;
+}
 
 .container {
   padding: 0 0.5rem;
@@ -67,27 +69,13 @@ a {
   width: 100%;
 }
 
-
-.title {
-	text-align: center;
-	font-size: 100%;
-}
-
-.earchingFor {
-	position: relative;
-}
-
 #search {
 	float: right;
 	margin-left: 1%;
 	position: absolute;
-	width: 50%
+	width: 50%;
+	font-size: 75%;
 }
 
-div.hover-div {
-    padding: 10px;
-    background: green;
-    color: white;
-}
 
 
