@@ -52,8 +52,11 @@
 
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{info.title}}<i class="material-icons right">close</i></span>
-        <p ng-repeat = 'tags in info.tags.split()'><a ng-href='https://www.flickr.com/photos/tags/{{tags}}'>{{tags}}</a></p>
-        <br class ='publish-date'>{{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</br>
+
+        Tags: <p id='tags' ng-repeat = "tags in info.tags.split(' ')"><a id='tagLinks' ng-href='https://www.flickr.com/photos/tags/{{tags}}' style="float:left" > {{tags}}</a></p>
+
+        <div  style="clear:both; padding-top: 10%;">Published: {{info.date_taken | date:"MM/dd/yyyy 'at' h:mma"}}</div>
+        
       </div>
 
     </div>
