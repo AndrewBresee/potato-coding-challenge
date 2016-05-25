@@ -28,11 +28,12 @@ body {
 
 .main-title {
 	text-align: center;
-	font-size: 500%;
+	font-size: 250%;
 }
 
 .searchingFor {
 	padding-bottom: 5%;
+	font-size: 150%;
 }
 
 .card-content {
